@@ -1,0 +1,236 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Boyfriend Day</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+<div class="backdrop"></div>
+<div class="darken"></div>
+<canvas id="fx" aria-hidden="true"></canvas>
+
+<audio id="song" src="assets/song.mp3" loop preload="auto"></audio>
+
+<!-- OPENING -->
+<section class="intro" id="intro">
+  <div class="intro-bg"></div>
+  <div class="intro-art" role="img" aria-label="An illustration of two people on a phone call, looking up at the same crescent moon"></div>
+  <div class="intro-content">
+    <h1>Happy Boyfriend Day ❤️</h1>
+    <p class="sub">To the boy who became my favourite person.</p>
+    <button class="btn pulse" id="open" type="button">Open My Surprise 💌</button>
+  </div>
+</section>
+
+<button class="music" id="music" type="button" aria-label="Play or pause the music">
+  <svg class="i-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3v11.3A4 4 0 1 0 11 18V8h6V3z"/></svg>
+  <svg class="i-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4h4v16H7zM13 4h4v16h-4z"/></svg>
+</button>
+
+<main id="top">
+  <!-- WELCOME -->
+  <section class="welcome">
+    <div class="wrap">
+      <p class="eyebrow">for you, from far away</p>
+      <p class="type caret" id="type" aria-live="polite"></p>
+      <a class="cue" href="#why">scroll<span></span></a>
+    </div>
+  </section>
+
+  <!-- WHY I LOVE YOU -->
+  <section class="sec" id="why">
+    <div class="wrap">
+      <h2 class="rv">Why I Love You ❤️</h2>
+      <div class="stack">
+        <article class="card glass rv">
+          <span class="tag">You Listen</span>
+          <p>Pata hai, main tumse kyun itna pyaar karti hoon?<br>Shayad isliye kyunki tum mujhe sirf sunte nahi ho, samajhte bhi ho.</p>
+        </article>
+
+        <article class="card glass rv" data-hearts>
+          <span class="tag">You Understand My Anger</span>
+          <p>Mere gusse ko bhi samajhte ho, aur phir mujhe manane ke liye patiently mere paas rehte ho.</p>
+          <p>Shayad isi liye main kabhi-kabhi aur zyada gussa kar leti hoon… kyunki dil mein pata hota hai ki tum ho, tum mujhe mana loge. 🥺❤️</p>
+        </article>
+
+        <article class="card glass rv">
+          <span class="tag">You Always Stay</span>
+          <p>Main chahe kuch bhi karun, tum mera saath dete ho.</p>
+          <p class="rv" style="--d:1.2s">Mere liye tumhara saath sirf words nahi hai… tum actions se bhi dikhate ho.</p>
+        </article>
+
+        <article class="card glass rv slowtext slow">
+          <span class="tag">You Handle My Emotions</span>
+          <p>
+            <span class="ln" style="--d:.4s">Jab main roti hoon, tum mujhe shaanti se samjhate ho.</span>
+            <span class="ln" style="--d:2.4s;margin-top:1em;color:var(--blush)">Meri khushi ho ya mera dukh, tum dono ko itni achhi tarah sambhalte ho.</span>
+          </p>
+        </article>
+
+        <article class="card glass rv heart-glow">
+          <span class="tag">You Care</span>
+          <p>Jab meri tabiyat kharab hoti hai na, toh tum khud mujhse zyada pareshan ho jaate ho.</p>
+          <p>Aur mujhe ye chhoti si baat bhi bahut badi lagti hai. ❤️</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROUD -->
+  <section class="sec proud center">
+    <div class="wrap">
+      <p class="eyebrow rv">and one more thing</p>
+      <h2 class="rv" style="--d:.15s">There's Something Else I Love About You…</h2>
+      <span class="rule rv" style="--d:.3s"></span>
+      <p class="big rv slow" style="--d:.2s">Tum ghar ke <em>chhote ladke</em> ho, lekin apni zimmedariyon ko jis tarah se nibhate ho, woh mujhe bahut proud feel karata hai.</p>
+      <p class="big rv slow" style="--d:.2s">Life mein chahe kitni bhi mushkilein aayein, tum unse nikalna jaante ho.</p>
+      <p class="big rv slow" style="--d:.2s">Aur sabse achhi baat? Tum mujhe bhi hamesha apni tarah <em>himmatwala</em> banana chahte ho.</p>
+    </div>
+  </section>
+
+  <!-- SMILE -->
+  <section class="sec center">
+    <div class="wrap">
+      <p class="eyebrow rv">your smile</p>
+      <h2 class="rv">Even After Everything…</h2>
+      <figure class="frame rv" style="margin-block:0 0">
+        <div class="ph"><img src="assets/smile.jpg" alt="Your smile, head tilted, eyes soft" loading="lazy"></div>
+      </figure>
+      <p class="lead caption rv">Tum chaaho toh meri khushi ke liye poori duniya sar par utha lo…<br><br>aur phir bhi itna sab hone ke baad, tum har cheez mein muskuraana jaante ho.</p>
+    </div>
+  </section>
+
+  <!-- LITTLE THINGS -->
+  <section class="sec center">
+    <div class="wrap">
+      <h2 class="rv">It's The Little Things ❤️</h2>
+      <div class="bits">
+        <div class="bit glass rv" style="--d:.0s;--bd:0s"><b>🍦</b> Ice cream</div>
+        <div class="bit glass rv" style="--d:.15s;--bd:.8s"><b>🍫</b> Chocolates</div>
+        <div class="bit glass rv" style="--d:.3s;--bd:1.6s"><b>🥺</b> Listening to me</div>
+        <div class="bit glass rv" style="--d:.45s;--bd:2.4s"><b>❤️</b> Making me feel better</div>
+        <div class="bit glass rv" style="--d:.6s;--bd:3.2s"><b>🫶</b> Staying beside me emotionally</div>
+      </div>
+      <p class="lead rv" style="max-width:28ch;margin-inline:auto">Jab mera mood kharab hota hai, toh ice cream aur chocolates se mujhe khush karne ki tumhari koshish… woh bhi toh tum hi ho.</p>
+    </div>
+  </section>
+
+  <!-- FREEDOM -->
+  <section class="sec calm center">
+    <div class="wrap">
+      <p class="eyebrow rv">you let me be me</p>
+      <h2 class="rv">You Never Make Me Feel Small</h2>
+      <p class="lead rv">Haan, tum mere ho… par phir bhi tumne mujhe kabhi kisi cheez ke liye roka nahi.</p>
+      <p class="lead rv" style="--d:.2s">Tum meri freedom, meri khushi aur meri individuality ko samajhte ho.</p>
+      <p class="lead rv" style="--d:.4s">Aur shayad isi wajah se main tumhare saath aur zyada khud reh paati hoon.</p>
+    </div>
+  </section>
+
+  <!-- BACCHA -->
+  <section class="sec center">
+    <div class="wrap">
+      <h2 class="rv">And Sometimes… You Become My Baby 🥺❤️</h2>
+      <div class="heartbox rv" id="babyHearts">
+        <figure class="frame" style="margin-block:0 0">
+          <div class="ph"><img src="assets/call2.jpg" alt="You on a video call, tongue out, being silly" loading="lazy" style="object-position:center 40%"></div>
+        </figure>
+      </div>
+      <p class="lead caption rv">Kabhi-kabhi jab tum khud emotional ho jaate ho, mere saath emotional ho kar woh mere pyaare se bacche ban jaate ho…<br><br>tab mujhe aur bhi zyada pyaar aata hai tum par.</p>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="sec" id="gallery">
+    <div class="wrap">
+      <h2 class="center rv">Little Pieces of Us 📸</h2>
+      <div class="board">
+        <button class="pol rv" type="button" style="--d:0s"><img src="assets/blue.jpg" alt="The two of you in matching blue outfits" loading="lazy"><span>Us, in blue</span></button>
+        <button class="pol rv" type="button" style="--d:.1s"><img src="assets/call1.jpg" alt="A video call, your hand against your cheek" loading="lazy"><span>Our kind of evenings</span></button>
+        <button class="pol rv" type="button" style="--d:.2s"><img src="assets/together.jpg" alt="A close selfie, heads together" loading="lazy"><span>Home is you</span></button>
+        <button class="pol rv" type="button" style="--d:.1s"><img src="assets/call3.jpg" alt="A video call, a shy smile" loading="lazy"><span>Making faces at you</span></button>
+        <button class="pol rv" type="button" style="--d:.2s"><img src="assets/school.jpg" alt="You sitting on the grass in a white shirt and tie" loading="lazy"><span>Always this handsome</span></button>
+        <button class="pol rv" type="button" style="--d:.3s"><img src="assets/smile.jpg" alt="Your smile, head tilted" loading="lazy"><span>That smile</span></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- LONG DISTANCE -->
+  <section class="sec distance">
+    <div class="wrap">
+      <div class="moon rv" aria-hidden="true"></div>
+      <h2 class="rv">Even Miles Can't Change This ❤️</h2>
+      <svg class="link rv" viewBox="0 0 400 150" role="img" aria-label="Two glowing points joined by a dotted line">
+        <path class="arc" d="M50 100 Q200 -30 350 100"/>
+        <circle class="pt-ring" cx="50" cy="100" r="7"/>
+        <circle class="pt-ring b" cx="350" cy="100" r="7"/>
+        <circle class="pt" cx="50" cy="100" r="7"/>
+        <circle class="pt" cx="350" cy="100" r="7"/>
+        <text x="50" y="132" text-anchor="middle">main</text>
+        <text x="350" y="132" text-anchor="middle">tum</text>
+        <text x="200" y="22" text-anchor="middle" style="font-size:26px">❤</text>
+        <circle class="pt" r="3.5"><animateMotion dur="5s" repeatCount="indefinite" path="M50 100 Q200 -30 350 100"/></circle>
+        <circle class="pt" r="3.5"><animateMotion dur="5s" begin="2.5s" repeatCount="indefinite" path="M350 100 Q200 -30 50 100"/></circle>
+      </svg>
+      <p class="lead rv">Hum alag shehron mein hain, par har raat ek hi chaand ke neeche, ek hi dil se tumhe yaad karti hoon.</p>
+      <p class="lead rv" style="--d:.25s;margin-top:1em">Doori sirf kilometres ki hai. Pyaar toh bilkul paas hai.</p>
+    </div>
+  </section>
+
+  <!-- HIS PHOTO -->
+  <section class="sec center">
+    <div class="wrap">
+      <h2 class="rv">And Then There's You…</h2>
+      <figure class="frame wide zoom rv heartbox" id="youHearts" style="margin-block:0 0">
+        <div class="ph"><img src="assets/boyfriend.jpg" alt="You, wearing glasses, against a warm red curtain" loading="lazy"></div>
+      </figure>
+    </div>
+  </section>
+
+  <!-- CINEMATIC -->
+  <section class="cine">
+    <div class="wrap">
+      <p class="cl rv">Tum mere liye sirf boyfriend nahi ho.</p>
+      <p class="cl soft rv">Tum woh insaan ho jiske saamne main gussa bhi ho sakti hoon…</p>
+      <p class="cl soft rv">…ro bhi sakti hoon…</p>
+      <p class="cl soft rv">…bachpana bhi kar sakti hoon…</p>
+      <p class="cl rv">…aur phir bhi mujhe pata hota hai ki tum mujhe samjhoge.</p>
+      <h2 class="cl big rv">Maybe that's what I love the most about you. ❤️</h2>
+    </div>
+  </section>
+
+  <!-- FINALE -->
+  <section class="sec finale">
+    <div class="wrap">
+      <p class="lead rv">You don't just love me when I'm easy to love.<br><br>You stay when I'm angry, emotional, difficult, silent, happy, or completely stupid.</p>
+      <p class="and rv" style="--d:.2s">And for that…</p>
+      <h2 class="rv" style="--d:.2s">I will always be grateful that it's you. ❤️</h2>
+      <button class="btn pulse rv" id="surprise" type="button">One More Thing… 💌</button>
+      <p class="sign rv">This isn't just a website. It's a little piece of my heart that I made for you. ❤️</p>
+    </div>
+  </section>
+</main>
+
+<footer>Made with all my love, just for you.</footer>
+
+<!-- SURPRISE -->
+<div class="modal" id="modal" hidden role="dialog" aria-modal="true" aria-labelledby="mt">
+  <div class="mcard glass">
+    <button class="mclose" id="mclose" type="button" aria-label="Close">×</button>
+    <h3 id="mt">Happy Boyfriend Day, mera pyaara sa baccha. 🥺❤️</h3>
+    <p>Distance may keep us apart for now, but it can never change how special you are to me.</p>
+    <p class="iluv">I love you. ❤️</p>
+  </div>
+</div>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lb" hidden role="dialog" aria-modal="true" aria-label="Photo viewer">
+  <button class="lb-btn lb-close" id="lbClose" type="button" aria-label="Close">×</button>
+  <button class="lb-btn lb-prev" id="lbPrev" type="button" aria-label="Previous photo">‹</button>
+  <button class="lb-btn lb-next" id="lbNext" type="button" aria-label="Next photo">›</button>
+  <figure><img id="lbImg" alt=""><figcaption id="lbCap"></figcaption></figure>
+</div>
+
+<script src="song-data.js"></script>
+<script src="script.js"></script>
+
+</body></html>
